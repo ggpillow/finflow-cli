@@ -6,7 +6,7 @@ function calculateNetIncome(income: number, expenses: number): number {
     return income - expenses;
 }
 
-function calculateRemaining(netIncome: number, savings: number) {
+function calculateRemaining(netIncome: number, savings: number): number {
     return netIncome - savings
 }
 
