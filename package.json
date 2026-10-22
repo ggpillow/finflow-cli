@@ -1,18 +1,36 @@
 {
-  "name": "budget-tracker-cli",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "name": "budget-quest-cli",
+  "version": "0.1.0",
+  "description": "Консольный контроллер личных финансов с конвертами, лимитами и геймификацией",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
   "scripts": {
+    "dev": "tsx src/index.ts",
+    "demo": "tsx src/demo/seed.ts",
+    "typecheck": "tsc --noEmit",
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "web:dev": "vite --config web/vite.config.ts",
+    "web:build": "vite build --config web/vite.config.ts"
+  },
+  "dependencies": {
+    "inquirer": "^12.9.0",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "typescript": "^7.0.2"
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
   }
 }
